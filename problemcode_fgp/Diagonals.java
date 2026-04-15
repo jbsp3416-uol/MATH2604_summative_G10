@@ -8,18 +8,73 @@ class Diagonals
         return 0;
     }
 */
-    static double[] sum(double[], double[]) // Member 2 Function
-    {
-        return 0;
+
+//1(b) sum of two diagonal matrices
+public static double[][] sum(double[][] matrixA, double[][] matrixB) {
+    int l = matrixA.length;
+    double[][] result = new double[l][l];
+
+    for (int i = 0; i < l; i++) {
+        result[i][i] = matrixA[i][i] + matrixB[i][i];
     }
 
-    static double[] product(double[], double[]) // Member 2 Function
-    {
-        return 0;
+    return result;
+}
+
+//1(c) product of two diagonal matrices
+public static double[][] product(double[][] matrixA, double[][] matrixB) {
+    int l = matrixA.length;
+    double[][] result = new double[l][l];
+
+    for (int i = 0; i < l; i++) {
+        result[i][i] = matrixA[i][i] * matrixB[i][i];
     }
 
-    static double[] inverse(double[]) // Member 1 Function
+    return result;
+}
+//function to print matrix
+public static void printMatrix(double[][] matrix)
     {
-        return 0;
-    }
+        for (double[] row : matrix) {
+            for (double value : row) {
+                System.out.print(value + " ");
+            }
+            System.out.println();
+        }
+
+}
+
+public static void main(String[] args) {
+    //testing the sum of two matrices
+    double[][] A = {
+        {1, 0, 0},
+        {0, 2, 0},
+        {0, 0, 3}
+    };
+
+    double[][] B = {
+        {3, 0, 0},
+        {0, 2, 0},
+        {0, 0, 1}
+    };
+
+    double[][] sumResult = sum(A, B);
+    
+    System.out.println("Sum of matrices:");
+    printMatrix(sumResult);
+    
+    System.out.println(); //to separate outputs for clarity
+    
+    //testing product function
+    double[][] productResult = product(A,B);
+    System.out.println("Product of matrices:");
+    printMatrix(productResult);
+}
+
+ /*
+ static double[] inverse(double[]) // Member 1 Function
+{
+    return 0;
+}
+*/
 }
