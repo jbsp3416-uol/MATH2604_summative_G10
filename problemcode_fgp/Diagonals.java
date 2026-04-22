@@ -41,8 +41,7 @@ public static void printMatrix(double[][] matrix)
             }
             System.out.println();
         }
-
-}
+    }
 
 public static void main(String[] args) {
     //testing the sum of two matrices
@@ -71,10 +70,12 @@ public static void main(String[] args) {
     printMatrix(productResult);
 }
 
- /*
- static double[] inverse(double[]) // Member 1 Function
+ // 1(d) inverse of a diagonal matrix
+static double[] inverse(double[] A) 
 {
-    return 0;
-}
-*/
+    double [] inverse = new double[A.length];
+    for (int i = 0; i < A.length; i++) {
+        inverse[i] = 1.0 / A[i];    // assume matrix is invertible, so no zero elements on the diagonal
+    }
+    return inverse;
 }

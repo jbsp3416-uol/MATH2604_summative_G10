@@ -35,8 +35,10 @@ class ODE
             {
                 M[i][i+1] = -1; // set super-diagonal
             }
+            // build vector v
+            
         }
-        // build vector v
+        
         
         return 1.1;
     }
