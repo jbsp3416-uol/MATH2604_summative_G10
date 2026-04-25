@@ -36,7 +36,23 @@ static double[][] exampleMatrix(int n) {
         }
         return matrix;
         }
-        
+
+// part(d) productWithDiagonal
+static double[][] productWithDiagonal(double[][] D, double[][] T)
+{
+    int n = D.length;
+    double[][] answer = new double[n][n];
+
+    for (int i=0; i<n; i++) {
+        for (int k=0; k<n; k++) {
+            answer[k][i] = D[k][k] * T[k][i];
+        }
+    
+    }
+    return answer;
+}
+
+// to print matrices
 public static void printMatrix(double[][] matrix) {
     for (double[] row : matrix) {
         for (double value : row) {
@@ -47,12 +63,32 @@ public static void printMatrix(double[][] matrix) {
 }
 
 public static void main(String[] args) {
+    //print part(a) matrix
+    System.out.println("Tridiagonal matrix:");
     int n = 5;
 
     double[][] matrix = exampleMatrix(n);
 
     printMatrix(matrix);
-}          
+    
+    System.out.println(); //to separate outputs for clarity
+    
+    // test part(d)
+    System.out.println("Product with Diagonal");
+    double[][] D = {
+        {1, 0, 0, 0, 0},
+        {0, 2, 0, 0, 0},
+        {0, 0, 3, 0, 0},
+        {0, 0, 0, 2, 0},
+        {0, 0, 0, 0, 1}
+    };
+
+    double[][] T = exampleMatrix(n);
+
+    double[][] answer = productWithDiagonal(D, T);
+    printMatrix(answer);
+        
+}
 
 /* 
     static boolean isValidTridiagonal(double[][]) // Member 3 Function
@@ -67,10 +103,7 @@ static double[][] sum(double[][], double[][]) // Member 1 Function
     return 0;
 }
 
-static double[][] productWithDiagonal(double[], double[][]) // Member 2 Function
-{
-    return 0;
-}
+
 /* 
     static double[] linearSolve(double[][], double[]) // Member 3 Function
     {
