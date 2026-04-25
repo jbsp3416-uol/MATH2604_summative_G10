@@ -79,3 +79,4 @@ static double[] inverse(double[] A)
     }
     return inverse;
 }
+}
