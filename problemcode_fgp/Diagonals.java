@@ -71,7 +71,7 @@ public static void main(String[] args) {
 }
 
  // 1(d) inverse of a diagonal matrix
-static double[] inverse(double[] A) 
+public static double[] inverse(double[] A) 
 {
     double [] inverse = new double[A.length];
     for (int i = 0; i < A.length; i++) {
