@@ -57,9 +57,10 @@ by averaging over the approximations at the nearest available x_i.
 
         double[] w = Tridiagonals.linearSolve(M, V);
 
-        // find the approximation for f(0.5)
+        // find the approximation for f(0.5) 
         double target = 0.5;
         double approximation = 0.0;
+        //  assuming n>0
         for (int i=0; i<n; i++)
         {
             if (x[i] == target) 
@@ -74,7 +75,7 @@ by averaging over the approximations at the nearest available x_i.
                 break;
             }
         }
-        
+
         return approximation;
     }
 }

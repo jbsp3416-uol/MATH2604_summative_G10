@@ -2,12 +2,12 @@ import static java.lang.Math.*;
 
 class Diagonals
 {
-/* 
-    static double[] exampleMatrix(int n) // Member 3 Function
-    {
-        return 0;
-    }
-*/
+//
+static double[] exampleMatrix(int n) 
+{
+    // Member 3 Function (n/a)
+    return null;
+}
 
 //1(b) sum of two diagonal matrices
 public static double[] sum(double[] matrixA, double[] matrixB) {

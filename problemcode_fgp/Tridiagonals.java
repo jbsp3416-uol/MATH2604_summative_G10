@@ -5,53 +5,54 @@ class Tridiagonals
 //part (a)
 static double[][] exampleMatrix(int n) {
     
-        double[][] a = new double[3][n];
-        for (int i=0; i<n; i++) {
-            //on the diagonal
-            a[1][i] = -(i+1)*(i+1); 
-            
-            // above diagonal 
-            if (i < n - 1) {
-                a[0][i] = 1;
-            }
-    
-            // below diagonal 
-            if (i > 0) {
-                a[2][i - 1] = i + 1;
-            }
-        }
-        double[][] matrix = new double[n][n];
-        for (int j=0; j<n; j++) {
-            //on the diagonal
-            matrix[j][j] = a[1][j];
-            
-            //above diagonal
-            if (j < n-1) {
-            matrix[j][j+1] = a[0][j];
-            }
-            //below diagonal
-            if (j > 0) {
-            matrix[j][j-1] = a[2][j-1];
-            }
-        }
-        return matrix;
+    double[][] a = new double[3][n];
+    for (int i=0; i<n; i++) {
+        //on the diagonal
+        a[1][i] = -(i+1)*(i+1); 
+        
+        // above diagonal 
+        if (i < n - 1) {
+            a[0][i] = 1;
         }
 
-/* //part (b) isValidTridiagonal
-    static boolean isValidTridiagonal(double[][]) // Member 3 Function
-    {
-        return 0;
+        // below diagonal 
+        if (i > 0) {
+            a[2][i - 1] = i + 1;
+        }
     }
-*/
+    double[][] matrix = new double[n][n];
+    for (int j=0; j<n; j++) {
+        //on the diagonal
+        matrix[j][j] = a[1][j];
+        
+        //above diagonal
+        if (j < n-1) {
+        matrix[j][j+1] = a[0][j];
+        }
+        //below diagonal
+        if (j > 0) {
+        matrix[j][j-1] = a[2][j-1];
+        }
+    }
+    return matrix;
+}
+
+//part (b) isValidTridiagonal
+static boolean isValidTridiagonal(double[][] A) 
+{
+    // Member 3 Function (n/a)
+    return false; //boolean value returned to avoid compilation error
+}
 
 //part (c) sum of two tridiagonal matrices
 static double[][] sum(double[][] A , double[][] B) 
 {
+    int n = A.length;
+    
     if (n != B.length) {
     return null; // Return null for incompatible matrix sizes
     }
 
-    int n = A.length;
     double[][] sum = new double[n][n];
 
     for (int i=0; i<n; i++) {
@@ -116,10 +117,11 @@ public static void main(String[] args) {
         
 }
 
-/*  //part (e) linearSolve
-    static double[] linearSolve(double[][], double[]) // Member 3 Function
-    {
-        return 0;
-    }
-*/
+//part (e) linearSolve
+static double[] linearSolve(double[][] T, double[] v) 
+{
+    // Member 3 Function (n/a)
+    return null;
+}
+
 }
