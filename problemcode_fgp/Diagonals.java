@@ -10,36 +10,33 @@ class Diagonals
 */
 
 //1(b) sum of two diagonal matrices
-public static double[][] sum(double[][] matrixA, double[][] matrixB) {
+public static double[] sum(double[] matrixA, double[] matrixB) {
     int l = matrixA.length;
-    double[][] result = new double[l][l];
+    double[] result = new double[l];
 
     for (int i = 0; i < l; i++) {
-        result[i][i] = matrixA[i][i] + matrixB[i][i];
+        result[i] = matrixA[i] + matrixB[i];
     }
 
     return result;
 }
 
 //1(c) product of two diagonal matrices
-public static double[][] product(double[][] matrixA, double[][] matrixB) {
+public static double[] product(double[] matrixA, double[] matrixB) {
     int l = matrixA.length;
-    double[][] result = new double[l][l];
+    double[] result = new double[l];
 
     for (int i = 0; i < l; i++) {
-        result[i][i] = matrixA[i][i] * matrixB[i][i];
+        result[i] = matrixA[i] * matrixB[i];
     }
 
     return result;
 }
 //function to print matrix
-public static void printMatrix(double[][] matrix)
+public static void printMatrix(double[] matrix)
     {
-        for (double[] row : matrix) {
-            for (double value : row) {
-                System.out.print(value + " ");
-            }
-            System.out.println();
+        for (double value : matrix) {
+            System.out.print(value + " ");
         }
     }
 
