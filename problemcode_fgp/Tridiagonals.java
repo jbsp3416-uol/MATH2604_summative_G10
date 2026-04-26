@@ -37,6 +37,32 @@ static double[][] exampleMatrix(int n) {
         return matrix;
         }
 
+/* //part (b) isValidTridiagonal
+    static boolean isValidTridiagonal(double[][]) // Member 3 Function
+    {
+        return 0;
+    }
+*/
+
+//part (c) sum of two tridiagonal matrices
+static double[][] sum(double[][] A , double[][] B) 
+{
+    if (n != B.length) {
+    return null; // Return null for incompatible matrix sizes
+    }
+
+    int n = A.length;
+    double[][] sum = new double[n][n];
+
+    for (int i=0; i<n; i++) {
+        for (int j=0; j<n; j++) {
+            sum[i][j]= A[i][j] + B[i][j];
+        }
+    }
+    return sum;
+
+}
+
 // part(d) productWithDiagonal
 static double[][] productWithDiagonal(double[][] D, double[][] T)
 {
@@ -90,21 +116,7 @@ public static void main(String[] args) {
         
 }
 
-/* 
-    static boolean isValidTridiagonal(double[][]) // Member 3 Function
-    {
-        return 0;
-    }
-*/
-
-/*
-static double[][] sum(double[][], double[][]) // Member 1 Function
-{
-    return 0;
-}
-
-
-/* 
+/*  //part (e) linearSolve
     static double[] linearSolve(double[][], double[]) // Member 3 Function
     {
         return 0;

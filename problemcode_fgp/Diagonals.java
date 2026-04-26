@@ -73,8 +73,9 @@ public static void main(String[] args) {
  // 1(d) inverse of a diagonal matrix
 public static double[] inverse(double[] A) 
 {
-    double [] inverse = new double[A.length];
-    for (int i = 0; i < A.length; i++) {
+    int l = A.length;
+    double [] inverse = new double[l];
+    for (int i = 0; i < l; i++) {
         inverse[i] = 1.0 / A[i];    // assume matrix is invertible, so no zero elements on the diagonal
     }
     return inverse;
