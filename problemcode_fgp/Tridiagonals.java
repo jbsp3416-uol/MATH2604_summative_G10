@@ -2,7 +2,7 @@ import static java.lang.Math.*;
 
 class Tridiagonals
 {
-//part (a)
+//part(a) exampleMatrix
 static double[][] exampleMatrix(int n) {
     
     double[][] a = new double[3][n];
@@ -37,14 +37,14 @@ static double[][] exampleMatrix(int n) {
     return matrix;
 }
 
-//part (b) isValidTridiagonal
+//part(b) isValidTridiagonal
 static boolean isValidTridiagonal(double[][] A) 
 {
     // Member 3 Function (n/a)
     return false; //boolean value returned to avoid compilation error
 }
 
-//part (c) sum of two tridiagonal matrices
+//part(c) sum of two tridiagonal matrices
 static double[][] sum(double[][] A , double[][] B) 
 {
     int n = A.length;
@@ -79,6 +79,13 @@ static double[][] productWithDiagonal(double[][] D, double[][] T)
     return answer;
 }
 
+//part(e) linearSolve
+static double[] linearSolve(double[][] T, double[] v) 
+{
+    // Member 3 Function (n/a)
+    return null;
+}
+
 // to print matrices
 public static void printMatrix(double[][] matrix) {
     for (double[] row : matrix) {
@@ -89,8 +96,9 @@ public static void printMatrix(double[][] matrix) {
     }
 }
 
+//to test each function
 public static void main(String[] args) {
-    //print part(a) matrix
+    //part(a) print matrix
     System.out.println("Tridiagonal matrix:");
     int n = 5;
 
@@ -100,7 +108,7 @@ public static void main(String[] args) {
     
     System.out.println(); //to separate outputs for clarity
     
-    // test part(d)
+    //part(d) to test function works
     System.out.println("Product with Diagonal");
     double[][] D = {
         {1, 0, 0, 0, 0},
@@ -115,13 +123,6 @@ public static void main(String[] args) {
     double[][] answer = productWithDiagonal(D, T);
     printMatrix(answer);
         
-}
-
-//part (e) linearSolve
-static double[] linearSolve(double[][] T, double[] v) 
-{
-    // Member 3 Function (n/a)
-    return null;
 }
 
 }
