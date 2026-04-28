@@ -63,7 +63,7 @@ public static double[] product(double[] A, double[] B) {
     return result;
 }
 
- /**
+/**
   * part(d) inverse of a diagonal matrix
   * This function takes an array representing the diagonal elements of a diagonal matrix and returns an array representing the diagonal elements of its inverse.
   * If any element on the diagonal is zero, it returns {@code null}.
@@ -74,9 +74,17 @@ public static double[] product(double[] A, double[] B) {
 public static double[] inverse(double[] A) 
 {
     int l = A.length;
+    if (A.length == 0) {
+        return null; //empty array, no inverse
+    }
+    for (int i = 0; i < l; i++) {
+        if (A[i] == 0) {
+            return null; //matrix is not invertible if any element on the diagonal is zero
+        }
+    }
     double [] inverse = new double[l];
     for (int i = 0; i < l; i++) {
-        inverse[i] = 1.0 / A[i];    // assume matrix is invertible, so no zero elements on the diagonal
+        inverse[i] = 1.0 / A[i];    //assume matrix is invertible, so no zero elements on the diagonal
     }
     return inverse;
 }
