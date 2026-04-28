@@ -1,16 +1,17 @@
 import static java.lang.Math.*;
 
 class ODE
-
-/*
-3). A DIFFERENTIAL EQUATION.
-Write a function that takes a and n parameters and returns an approximation for f(0.5).
-Assume n>0.
-If 0.5 is not among the x_i, the approximation should be computed by averaging over the approximations at the nearest available x_i.
-*/
-
-
 {
+/**
+ * This function approximates the solution to the ODE f''(x) + cos(x)*f(x) = a*x^2, with boundary conditions f(0) = f(1) = 0, at the point x=0.5.
+ * The method solves the linear system M*w = -h*h*v, where M is a tridiagonal matrix defined by the problem and v is a vector defined by the function v[i] = a*x[i]*x[i].
+ * It then uses the solution w to find an approximation for f(0.5).
+ * It assumes n>0. If 0.5 is not among the x[i], it computes the approximation by averaging the two w[i] values corresponding to the nearest x[i] values that are immediately below and above 0.5.
+ * @param a a parameter (real constant) in the function v[i] = a*x[i]*x[i]
+ * @param n the number of grid points (positive integer), typically large
+ * @return an approximation for f(0.5)
+ **/
+
     static double solve(double a, int n)
     {
         double h = 1.0/ (n + 1);
@@ -61,12 +62,12 @@ If 0.5 is not among the x_i, the approximation should be computed by averaging o
         //  assuming n>0
         for (int i=0; i<n; i++)
         {
-            if (x[i] == target) 
+            if (x[i] == target) // case where 0.5 is among the x[i]
             {
                 approximation = w[i];
                 break;
             }
-            else if (x[i] < target && (i == n-1 || x[i+1] > target)) 
+            else if (x[i] < target && (i == n-1 || x[i+1] > target))  // case where 0.5 is not among the x[i]
             {
                 // target is between x[i] and x[i+1]
                 approximation = (w[i] + w[i+1]) / 2.0;
