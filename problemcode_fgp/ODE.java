@@ -4,11 +4,9 @@ class ODE
 
 /*
 3). A DIFFERENTIAL EQUATION.
-Write a function that takes a and n parameters
-and returns an approximation for f(0.5).
+Write a function that takes a and n parameters and returns an approximation for f(0.5).
 Assume n>0.
-If 0.5 is not among the x_i, the approximation should be computed
-by averaging over the approximations at the nearest available x_i.
+If 0.5 is not among the x_i, the approximation should be computed by averaging over the approximations at the nearest available x_i.
 */
 
 
