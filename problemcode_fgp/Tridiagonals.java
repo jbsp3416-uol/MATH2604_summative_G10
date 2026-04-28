@@ -9,7 +9,6 @@ class Tridiagonals
  * @param n the dimension of the square matrix that will be generated
  * @return an n x n tridiagonal matrix
  */
-
 static double[][] exampleMatrix(int n) {
     
     double[][] a = new double[3][n];
@@ -44,14 +43,27 @@ static double[][] exampleMatrix(int n) {
     return matrix;
 }
 
-//part(b) isValidTridiagonal
+/**
+ * part(b) isValidTridiagonal
+ * This function checks if a given matrix is a tridiagonal matrix
+ * This function is not complete due to no designated third member.
+ * @param A the matrix to be checked
+ * @return true if the matrix is tridiagonal, returns false due to incomplete function
+ */
 static boolean isValidTridiagonal(double[][] A) 
 {
     // Member 3 Function (n/a)
     return false; //boolean value returned to avoid compilation error
 }
 
-//part(c) sum of two tridiagonal matrices
+/**
+ * part(c) sum of two tridiagonal matrices
+ * This function computes the sum of two tridiagonal matrices by adding their corresponding elements.
+ * If the input matrices are of different sizes, it returns {@code null}.
+ * @param A the first tridiagonal matrix
+ * @param B the second tridiagonal matrix
+ * @return the sum of the two tridiagonal input matrices
+ */
 static double[][] sum(double[][] A , double[][] B) 
 {
     int n = A.length;
@@ -73,13 +85,12 @@ static double[][] sum(double[][] A , double[][] B)
 
 /**
  * part(d) productWithDiagonal
- * This function computes the product of a diagonal matrix D with a 
+ * This function computes the product of a diagonal matrix D with a
  *  tridiagonal matrix T
  * @param D the diagonal matrix
  * @param T the tridiagonal matrix
  * @return the product of the diagonal and tridiagonal input matrices
  */
-
 static double[][] productWithDiagonal(double[][] D, double[][] T)
 {
     int n = D.length;
@@ -94,7 +105,14 @@ static double[][] productWithDiagonal(double[][] D, double[][] T)
     return answer;
 }
 
-//part(e) linearSolve
+/**
+ * part(e) linearSolve
+ * This function solves a system of linear equations Tx = v where T is a tridiagonal matrix and v is a vector, using the Thomas algorithm (a specialized form of Gaussian elimination for tridiagonal systems).
+ * This function is incomplete due to no designated third member.
+ * @param T the tridiagonal matrix
+ * @param v the right-hand side vector
+ * @return the solution vector x but returns {@code null} due to incomplete function
+ */
 static double[] linearSolve(double[][] T, double[] v) 
 {
     // Member 3 Function (n/a)
