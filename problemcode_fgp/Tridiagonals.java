@@ -85,8 +85,7 @@ static double[][] sum(double[][] A , double[][] B)
 
 /**
  * part(d) productWithDiagonal
- * This function computes the product of a diagonal matrix D with a
- *  tridiagonal matrix T
+ * This function computes the product of a diagonal matrix D with a tridiagonal matrix T
  * @param D the diagonal matrix
  * @param T the tridiagonal matrix
  * @return the product of the diagonal and tridiagonal input matrices

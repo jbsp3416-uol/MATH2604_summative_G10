@@ -115,6 +115,11 @@ public static void main(String[] args) {
     double[] productResult = product(A,B);
     System.out.println("Product of matrices:");
     printMatrix(productResult);
+    
+    //part(d) testing inverse
+    double[] inverseResult = inverse(A);
+    System.out.println("Inverse of diagonal matrix:");
+    printMatrix(inverseResult);
 }
 
 }
