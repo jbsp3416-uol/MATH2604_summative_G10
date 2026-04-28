@@ -2,7 +2,14 @@ import static java.lang.Math.*;
 
 class Tridiagonals
 {
-//part(a) exampleMatrix
+
+/**
+ * part(a) exampleMatrix
+ * This function produces an n x n tridiagonal matrix of size 3 x n
+ * @param n the dimension of the square matrix that will be generated
+ * @return an n x n tridiagonal matrix
+ */
+
 static double[][] exampleMatrix(int n) {
     
     double[][] a = new double[3][n];
@@ -64,7 +71,15 @@ static double[][] sum(double[][] A , double[][] B)
 
 }
 
-// part(d) productWithDiagonal
+/**
+ * part(d) productWithDiagonal
+ * This function computes the product of a diagonal matrix D with a 
+ *  tridiagonal matrix T
+ * @param D the diagonal matrix
+ * @param T the tridiagonal matrix
+ * @return the product of the diagonal and tridiagonal input matrices
+ */
+
 static double[][] productWithDiagonal(double[][] D, double[][] T)
 {
     int n = D.length;
