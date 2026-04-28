@@ -9,11 +9,20 @@ static double[] exampleMatrix(int n)
     return null;
 }
 
+/**
+ * @param A the diagnoal elements of the first matrix
+ * @param B the diagonal elements of the second matrix
+ * @return a new array of the sum of the two diagonal elements or {@code null}
+ *  if the input arrays are of different length
+ */
 //part(b) sum of two diagonal matrices
 public static double[] sum(double[] A, double[] B) {
     int l = A.length;
     double[] result = new double[l];
 
+    if (A.length != B.length) {
+        return null; //diagonal arrays need to be the same length
+    }
     for (int i = 0; i < l; i++) {
         result[i] = A[i] + B[i];
     }
@@ -21,11 +30,20 @@ public static double[] sum(double[] A, double[] B) {
     return result;
 }
 
+/**
+ * @param A the diagonal elements of first matrix
+ * @param B the diagonal elemnts of the second matrix
+ * @return the product of the two diagonal input arrays or {@code null} 
+ *  if the input arrays are of different length
+ */
 //part(c) product of two diagonal matrices
 public static double[] product(double[] A, double[] B) {
     int l = A.length;
     double[] result = new double[l];
 
+    if (A.length != B.length) {
+        return null; //diagonal arrays need to be the same length
+    }
     for (int i = 0; i < l; i++) {
         result[i] = A[i] * B[i];
     }
