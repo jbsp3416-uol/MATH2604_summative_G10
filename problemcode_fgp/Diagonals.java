@@ -7,6 +7,9 @@ class Diagonals
  * part(a) exmapleMatrix
  * This function takes a positive integer n and returns a 2D array representing the diagonal elemtents
  * This function is not complete due to no designated third member.
+ * @param n the size of the diagonal array
+ * @return a 2D array representing the diagonal elements of a matrix but {@code null}
+ *  for the incomplete function
  */
 static double[] exampleMatrix(int n) 
 {
