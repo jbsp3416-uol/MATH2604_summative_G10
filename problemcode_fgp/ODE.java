@@ -2,16 +2,15 @@ import static java.lang.Math.*;
 
 class ODE
 {
-/**
- * This function approximates the solution to the ODE f''(x) + cos(x)*f(x) = a*x^2, with boundary conditions f(0) = f(1) = 0, at the point x=0.5.
- * The method solves the linear system M*w = -h*h*v, where M is a tridiagonal matrix defined by the problem and v is a vector defined by the function v[i] = a*x[i]*x[i].
- * It then uses the solution w to find an approximation for f(0.5).
- * It assumes n>0. If 0.5 is not among the x[i], it computes the approximation by averaging the two w[i] values corresponding to the nearest x[i] values that are immediately below and above 0.5.
- * @param a a parameter (real constant) in the function v[i] = a*x[i]*x[i]
- * @param n the number of grid points (positive integer), typically large
- * @return an approximation for f(0.5)
- **/
-
+    /**
+     * This function approximates the solution to the ODE f''(x) + cos(x)*f(x) = a*x^2, with boundary conditions f(0) = f(1) = 0, at the point x=0.5.
+     * The method solves the linear system M*w = -h*h*v, where M is a tridiagonal matrix defined by the problem and v is a vector defined by the function v[i] = a*x[i]*x[i].
+     * It then uses the solution w to find an approximation for f(0.5).
+     * It assumes n>0. If 0.5 is not among the x[i], it computes the approximation by averaging the two w[i] values corresponding to the nearest x[i] values that are immediately below and above 0.5.
+     * @param a a parameter (real constant) in the function v[i] = a*x[i]*x[i]
+     * @param n the number of grid points (positive integer), typically large
+     * @return an approximation for f(0.5)
+     **/
     static double solve(double a, int n)
     {
         double h = 1.0/ (n + 1);
